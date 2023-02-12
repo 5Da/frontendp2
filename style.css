@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+body{
+    background-color: black;
+    font-family: sans-serif;
+}
+
+header{
+    padding: 30px 15%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+span{
+    color: crimson;
+}
+
+.menu-icon{
+    font-size: 30px;
+    display: none;
+}
+
+.logo a{
+    color: #fff;
+    font-size: 30px;
+    transition: all .50s ease-in;
+}
+
+.logo a:hover{
+    color: crimson;
+}
+
+.navlist a{
+    margin-right: 30px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.navlist a:hover, 
+.navlist a.active{
+    color: crimson;
+}
+
+section{
+    padding: 160px 15%;
+}
+
+.home{
+    color: #fff;
+}
+
+.home-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    
+}
+
+.home-img img{
+    width: 470px;
+    height: 260px;
+    transition: all .50s ease;
+}
+
+.home-img img:hover{
+    transform: translateY(-30px);
+}
+
+.home-text h1{
+    font-size: 30px;
+}
+
+.home-text p {
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.home-text a{
+    padding: 15px 30px;
+    color: #fff;
+    background-color: crimson;
+    border: 1px solid crimson;
+    border-radius: 6px;
+    transition: all .50s ease;
+
+}
+
+.home-text a:hover{
+    background-color: transparent;
+}
+
+@media(max-width: 1083px){
+    header{
+        padding: 30px 5%;
+    }
+
+    section{
+        padding: 160px 5%;
+    }
+}
+
+@media(max-width: 963px){
+    .menu-icon{
+        display: block;
+    }
+
+    .menu-icon:hover{
+        cursor: pointer;
+    }
+
+    .navlist{
+        position: absolute;
+        top: -1000px;
+        left: 0;
+        background-color: #111;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .navlist.open{
+        top: 110%;
+        /* transition: all .50s ease; */
+    }
+
+    .navlist a{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media(max-width: 790px){
+    .home-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .home-img img{
+        margin-top: -50px;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 563px){
+    .home-text{
+        max-width: 100%;
+    }
+
+    .home-text h1,
+    .home-text h2{
+        font-size: 18px;
+    }
+    .home-text p{
+        font-size: 14px;
+    }
+}
